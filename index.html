@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Web Services</title>
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3f51b5;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 50px;
+        }
+
+        .product-showcase {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .product-showcase img {
+            width: 50%;
+            margin-bottom: 20px;
+        }
+
+        .product-showcase h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .product-showcase button {
+            background-color: #3f51b5;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #product-details {
+            margin-top: 20px;
+            display: none;
+        }
+
+        #product-details h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #3f51b5;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function showDetails() {
+          const details = document.getElementById("product-details");
+          if (details.style.display === "none") {
+            details.style.display = "block";
+          } else {
+            details.style.display = "none";
+          }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>AWS</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="product-showcase">
+            <img src="images/cloud-computing.jpg" alt="Cloud Computing">
+            <h2>Unlock the Power of Cloud Computing</h2>
+            <p>Amazon Web Services (AWS) offers the world's most comprehensive and 
+            flexible cloud computing platform. With a broad range of global services, 
+            you can build, deploy, and scale your applications with ease.</p>
+            <button onclick="showDetails()">Learn More</button>
+        </section>
+        <div id="product-details">
+            <h3>Our Featured Products</h3>
+            <ul>
+                <li>Amazon EC2: Scalable virtual machines in the cloud</li>
+                <li>Amazon S3: Secure object storage for a range of data types</li>
+                <li>Amazon SQS: Reliable messaging queues for asynchronous communication</li>
+                <li>Amazon DynamoDB: NoSQL database for fast and scalable applications</li>
+                <li>Amazon Lambda: Serverless compute service for running code without provisioning servers</li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <?php echo date("Y"); ?> Amazon.com
